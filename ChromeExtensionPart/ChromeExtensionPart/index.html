@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --malicious-color: #e74c3c;  /* A striking red for malicious URLs */
+      --benign-color: #2ecc71;     /* A soothing green for benign URLs */
+      --bg-color: #f4f4f4;         /* A gentle background tone */
+      --card-bg: #ffffff;          /* Pristine white for card surfaces */
+      --text-color: #333;          /* Deep, readable text */
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-color);
+    }
+    
+    h2 {
+      margin: 40px 0 20px;
+      color: var(--text-color);
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <!-- Section for Malicious URLs -->
+  <section>
+    <h2>Malicious URLs</h2>
+    <div class="row">
+      <div class="card">
+        <div class="card-header" style="color: var(--malicious-color);">Malicious URL 1</div>
+        <a href="https://www.sinduscongoias.com.br/index.php/juridico/convencoes-coletivas,malicious,1,72,25,40,9,6,1,0,0,0,4,0,1,0,1,0,61,3,1,1" target="_blank">https://example.com/malicious1</a>
+      </div>
+      <div class="card">
+        <div class="card-header" style="color: var(--malicious-color);">Malicious URL 2</div>
+        <a href="https://www.sinduscongoias.com.br/index.php/juridico/convencoes-coletivas,malicious,1,72,25,40,9,6,1,0,0,0,4,0,1,0,1,0,61,3,1,1" target="_blank">https://example.com/malicious2</a>
+      </div>
+      <div class="card">
+        <div class="card-header" style="color: var(--malicious-color);">Malicious URL 3</div>
+        <a href="https://example.com/malicious3" target="_blank">https://example.com/malicious3</a>
+      </div>
+      <!-- Additional malicious URL cards can be added here -->
+    </div>
+  </section>
+  
+  <!-- Section for Benign URLs -->
+  <section>
+    <h2>Benign URLs</h2>
+    <div class="row">
+      <div class="card">
+        <div class="card-header" style="color: var(--benign-color);">Benign URL 1</div>
+        <a href="https://www.google.com" target="_blank">https://www.google.com</a>
+      </div>
+      <div class="card">
+        <div class="card-header" style="color: var(--benign-color);">Benign URL 2</div>
+        <a href="https://www.example-benign.com" target="_blank">https://www.example-benign.com</a>
+      </div>
+      <div class="card">
+        <div class="card-header" style="color: var(--benign-color);">Benign URL 3</div>
+        <a href="https://www.example-benign.com/page" target="_blank">https://www.example-benign.com/page</a>
+      </div>
+      <!-- Additional benign URL cards can be added here -->
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious URL Detector</title>
+    <style>
+        html, body {
+            background: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .wrapper {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h3.info {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .status {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .webname {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 70%;
+            color: #34495e;
+            word-wrap: break-word;
+        }
+
+        .webstatus {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .safe {
+            color: #27ae60;
+            background-color: #eafaf1;
+        }
+
+        .malicious {
+            color: #e74c3c;
+            background-color: #fbe5e6;
+        }
+
+        .status h3 {
+            margin: 0;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h3 class="info">Malicious URL Detector</h3>
+        <div class="status">
+            <h3 class="webname">https://www.w3schools.com/js/js_ajax_intro.asp</h3>
+            <h3 class="webstatus safe">Safe</h3>
+        </div>
+       
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
